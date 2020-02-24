@@ -82,7 +82,7 @@ Add document title in `App`, `HogContainer` and `PigTile`.
 ---
 
 ## Third hurdle: timer
-Imagine you want to have a countdown for each hog for some reason. In this hurdle, you will build a timer that count down. Here's pseudo-code version of what you want to do:
+Imagine you want to have a countdown for each hog for some reason -- let's say it's a game where a user can click on a given hog only for the first five seconds. In this hurdle, you will build a timer that counts down. Here's pseudo-code version of what you want to do:
 - in `componentDidMount` set an interval that will update the state every second;
 - comment out previous console.logs in `render` and `componentDidUpdate`;
 - console.log state.timeToGo in `render` with a name of the hog:

@@ -23,13 +23,13 @@ class App extends Component {
     document.title = "Hog Blog " + document.title
   }
 
-  componentDidUpdate(){
-    console.log(`%cUPDATED: App`, `color: ${generalAppColor}`);
-  }
-
   shouldComponentUpdate(){
     console.log(`%cMAYBE WILL UPDATE: App`, `color: ${generalAppColor}`);
     return true
+  }
+
+  componentDidUpdate(){
+    console.log(`%cUPDATED: App`, `color: ${generalAppColor}`);
   }
 
   handleSort = (newSortValue) => {

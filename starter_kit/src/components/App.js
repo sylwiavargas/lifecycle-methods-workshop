@@ -22,13 +22,13 @@ class App extends Component {
     // console.log(`%cMOUNTED: App`, `color: ${generalAppColor}`);
   }
 
-  componentDidUpdate(){
-    // console.log(`%cUPDATED: App`, `color: ${generalAppColor}`);
-  }
-
   shouldComponentUpdate(){
     // console.log(`%cMAYBE WILL UPDATE: App`, `color: ${generalAppColor}`);
     return true // this needs to return true or false or you'll upset React
+  }
+  
+  componentDidUpdate(){
+    // console.log(`%cUPDATED: App`, `color: ${generalAppColor}`);
   }
 
   ///////////////////// these functions you already know from pairing! /////////////////////

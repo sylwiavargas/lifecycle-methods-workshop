@@ -19,6 +19,12 @@ export default class HogContainer extends Component {
         document.title = "| Piggies " + document.title 
     }
 
+    shouldComponentUpdate(nextProps, nextState){
+        // return nextProps.hogs.length > 14
+        console.log(`%cMAYBE WILL UPDATE: HogContainer`, `color: ${generalHogContainerColor}`);
+        return true
+    }
+
     componentDidUpdate(){
         console.log(`%cUPDATED: HogContainer`, `color: ${generalHogContainerColor}`);
       }
@@ -28,13 +34,8 @@ export default class HogContainer extends Component {
     //     return {code}
     // }
 
-    shouldComponentUpdate(nextProps, nextState){
-        // return nextProps.hogs.length > 14
-        console.log(`%cMAYBE WILL UPDATE: HogContainer`, `color: ${generalHogContainerColor}`);
-        return true
-    }
-
     componentWillUnmount(){
+        // clearInterval(this.interval)
         console.log(`%cUNMOUNTING: HogContainer`, `color: ${generalHogContainerColor}`);
     }
 

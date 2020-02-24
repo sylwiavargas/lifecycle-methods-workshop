@@ -17,14 +17,14 @@ export default class HogContainer extends Component {
         // console.log(`%cMOUNTED: HogContainer`, `color: ${generalHogContainerColor}`);
     }
 
-    componentDidUpdate(){
-        // console.log(`%cUPDATED: HogContainer`, `color: ${generalHogContainerColor}`);
-      }
-
     shouldComponentUpdate(nextProps, nextState){
         // console.log(`%cMAYBE WILL UPDATE: HogContainer`, `color: ${generalHogContainerColor}`);
         return true
     }
+
+    componentDidUpdate(){
+        // console.log(`%cUPDATED: HogContainer`, `color: ${generalHogContainerColor}`);
+      }
 
     componentWillUnmount(){
         // console.log(`%cUNMOUNTING: HogContainer`, `color: ${generalHogContainerColor}`);

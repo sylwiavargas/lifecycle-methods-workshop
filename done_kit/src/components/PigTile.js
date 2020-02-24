@@ -13,22 +13,29 @@ export default class PigTile extends Component {
       }
 
     componentDidMount(){
-        // this.interval = setInterval(
-        //     () => this.setState({
-        //       timeToGo: this.state.timeToGo - 1
-        //     }),
-        //     1000
-        //   )
+        this.interval = setInterval(
+            () => this.setState({
+              timeToGo: this.state.timeToGo - 1
+            }),
+            1000
+          )
         console.log(`%cMOUNTED: PigTile`, `color: ${generalTileColor}`);
     }
 
     shouldComponentUpdate(nextProps, nextState){
+      if (this.props.hog.name === "Piggy smalls"){
+        console.log("🐽 🐽 🐽 🐽 🐽 ")
+        console.log(`%cMAYBE UPDATE: PigTile of ${this.props.hog.name}`, `color: ${generalTileColor}`, this.state.timeToGo);
+      }
         // return nextState.timeToGo > -1
         return true
     }
 
     componentDidUpdate(){
-        console.log(`%cUPDATED: PigTile`, `color: ${generalTileColor}`);
+      if (this.props.hog.name === "Piggy smalls"){
+        console.log(`%cUPDATED: PigTile of ${this.props.hog.name}`, `color: ${generalTileColor}`);
+      }
+        // console.log(`%cUPDATED: PigTile of ${this.props.hog.name}`, `color: ${generalTileColor}`);
       }
 
     componentWillUnmount(){
@@ -37,9 +44,12 @@ export default class PigTile extends Component {
     }
 
     render() {
-        console.log(`%cRENDERED: PigTile`, `color: ${generalTileColor}`);
-        console.groupEnd()
+      if (this.props.hog.name === "Piggy smalls"){
+        console.log(`%cRENDERED: PigTile of ${this.props.hog.name}`, `color: ${generalTileColor}`, this.state.timeToGo);
+      }
+        // console.log(`%cRENDERED: PigTile`, `color: ${generalTileColor}`);
         // console.log(`%c${this.props.hog.name}:`, `color: ${generalTileColor}`, this.state.timeToGo)
+        console.groupEnd()
 
         let {name: pigName, specialty, greased, weight, 'highest medal achieved': medal} = this.props.hog
         let slug = pigName.toLowerCase().replace(/\s/g, "_")
