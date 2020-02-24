@@ -50,17 +50,16 @@ export default class PigTile extends Component {
         // console.log(`%cRENDERED: PigTile`, `color: ${generalTileColor}`);
         // console.log(`%c${this.props.hog.name}:`, `color: ${generalTileColor}`, this.state.timeToGo)
         console.groupEnd()
-
         let {name: pigName, specialty, greased, weight, 'highest medal achieved': medal} = this.props.hog
         let slug = pigName.toLowerCase().replace(/\s/g, "_")
         return (
             <div >
-               <h1>{pigName}</h1>
-               <img src={`/hog-imgs/${slug}.jpg`} alt=""/>
-               <p><strong>specialty:</strong> {specialty}</p>
-               <p><strong>greased:</strong> {greased}</p>
-               <p><strong>weight:</strong> {weight}</p>
-               <p><strong>medal:</strong> {medal}</p>
+              <h1>{pigName}</h1>
+              <img src={`/hog-imgs/${slug}.jpg`} alt=""/>
+              <p><strong>specialty:</strong> {specialty}</p>
+              <p><strong>greased:</strong> {greased}</p>
+              <p><strong>weight:</strong> {weight}</p>
+              <p><strong>medal:</strong> {medal}</p>
             </div>
         )
     }

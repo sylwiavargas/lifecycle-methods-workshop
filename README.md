@@ -11,6 +11,40 @@ To start your adventure, `cd` into a folder of choice, run `npm install` and the
 
 ---
 
+## Agenda
+This lecture is meant as a space for exploring the superpowers of React components. The lecture will have a form of quick-pace fun riddles and will include practice exercices. **There are no awesomeness points and mistakes are viewed as a part of learning**.
+1. **Intro + rules:**
+- readme overview
+- time and break
+- speaking and questions
+- parking lot
+2. **Builder analogy:**
+- explore it [here](http://lifecycle-photostory.surge.sh/)
+3. **Builder analogy:**
+- explore it [here](http://lifecycle-photostory.surge.sh/)
+4. **First hurdle:** logging spree
+- `constructor` 
+- `render`
+- `shouldComponentUpdate`
+- `componentDidMount`
+- `componentDidUpdate`
+- `componentWillUnmount`
+5. **Break** (5 mins)
+6. **Second hurdle:** SEO and accessibility
+- `componentDidMount`
+7. **Third hurdle:** timer
+- `componentDidMount`
+8. **Fourth Hurdle:** preventing memory leakage
+- `componentWillnmount`
+- or `componentDidUpdate`
+9. **Fifth Hurdle:** controlling rerendering
+- `shouldComponentUpdate`
+10. **Sixth Hurdle:** forbidden knowledge
+- `getDerivedStateFromProps`
+11. **SWABTs review + Q&A**
+
+---
+
 ## SBATs:
 - student will understand what lifecycle methods are;
 - student will understand when lifecycle methods fire up;
@@ -34,34 +68,17 @@ To start your adventure, `cd` into a folder of choice, run `npm install` and the
 
 ---
 
-## Agenda
-This lecture is meant as a space for exploring the superpowers of React components. The lecture will have a form of quick-pace fun riddles and will include practice exercices. **There are no awesomeness points and mistakes are viewed as a part of learning**.
-1. **Intro + rules:**
-- readme overview
-- time and break
-- speaking and questions
-- parking lot
-2. **Builder analogy:**
-- explore it [here](http://lifecycle-photostory.surge.sh/)
-3. **First hurdle:** logging spree
-- `constructor` 
-- `render`
-- `componentDidMount`
-4. **Break** (5 mins)
-5. **Second hurdle:** SEO and accessibility
-- `componentDidMount`
-5. **Third hurdle:** timer
-- `componentDidMount`
-6. **Fourth Hurdle:** preventing memory leakage
-- `componentWillnmount`
-7. **Fifth Hurdle:** controlling rerendering
-- `shouldComponentUpdate`
-8. **Sixth Hurdle:**
-- `getDerivedStateFromProps`
+## Appetizers: stack overflow by rerendering
+Have you ever tried `setState` in `render()`? Let's try it and see what happens!
+
+> Error: Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.
+
+Oho. React doesn't like that. That's because `render()` is supposed to be a pure function, which means that every single time it should give the same return value. Also, changes in state trigger render and so you reach stack overflow, or infinite loop.
 
 ---
+
 ## First hurdle: logging spree
-In this hurdle, your task is to put a console.log in `constructor`, `render`, `componentDidMount`, `componentDidUpdate`, `shouldComponentUpdate` and `componentWillUnmount` methods in: `App.js`, `HogContainer.js` and `PigTile.js`. Once you've done that, run your app and see what order the components are being rendered.
+In this hurdle, your task is to put a console.log in `constructor`, `render`, `componentDidMount`, `shouldComponentUpdate`, `componentDidUpdate` and `componentWillUnmount` methods in: `App.js`, `HogContainer.js` and `PigTile.js`. Once you've done that, run your app and see what order the components are being rendered.
 
 ### styling logs
 As you see, that's a lot of logs. At the top of each component, I have provided a color unique for this component. Perhaps you want to color-code your messages? Here's how to do it:
@@ -86,12 +103,30 @@ Add document title in `App`, `HogContainer` and `PigTile`.
 Imagine you want to have a countdown for each hog for some reason -- let's say it's a game where a user can click on a given hog only for the first five seconds. In this hurdle, you will build a timer that counts down. Here's pseudo-code version of what you want to do:
 - in `componentDidMount` set an interval that will update the state every second;
 - comment out previous console.logs in `render` and `componentDidUpdate`;
-- console.log state.timeToGo in `render` with a name of the hog:
+- let's put a conditional that will console.log only one pig's lifecycle methods so we don't get overwhelmed. In `PigTile` put this in `shouldComponentUpdate`
 ```
-console.log(`%c${this.props.hog.name}:`, `color: ${generalTileColor}`, this.state.timeToGo)
+if (this.props.hog.name === "Piggy smalls"){
+    console.log(`🐽 🐽 🐽 🐽`)
+    console.log(`%cShould I update?`, `color: ${generalTileColor}`)
+}
+```
+in `componentDidUpdate`:
+```
+if (this.props.hog.name === "Piggy smalls"){
+    console.log(`%cOkay, I've updated!`, `color: ${generalTileColor}`)
+}
 ```
 
-### set interval syntax
+and in `render`:
+```
+if (this.props.hog.name === "Piggy smalls"){
+    console.log(`%c${this.props.hog.name}:`, `color: ${generalTileColor}`, this.state.timeToGo)
+}
+```
+
+### setInterval syntax
+The `setInterval` function accepts two arguments: a callback function that describes the desired action, and the number of miliseconds. The below syntax will update state every second.
+
 ```
 this.interval = setInterval(
             () => this.setState({
@@ -113,6 +148,8 @@ That's because you have an async method of setInterval running in the background
 ```
 clearInterval(this.interval)
 ```
+
+And how can we disable the interval in `componentDidUpdate`?
 
 ---
 
