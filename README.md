@@ -50,7 +50,7 @@ This lecture is meant as a space for exploring the superpowers of React componen
 - student will understand when lifecycle methods fire up;
 - student will understand why **we should never put setState() in render()**;
 - student will know how to prevent unnecessary rerendering of a component;
-- student will understand a memory leak causes and treatment;
+- student will understand a memory leak symptoms, causes and treatment;
 - student will remember forever **not to put props in state**;
 
 ---
@@ -73,7 +73,7 @@ Have you ever tried `setState` in `render()`? Let's try it and see what happens!
 
 > Error: Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.
 
-Oho. React doesn't like that. That's because `render()` is supposed to be a pure function, which means that every single time it should give the same return value. Also, changes in state trigger render and so you reach stack overflow, or infinite loop.
+Oho. React doesn't like that. That's because `render()` is supposed to be a pure function, which means that every single time it should give the same return value. Also, changes in state trigger render and so you reach stack overflow, or infinite loop. Instead, put the initial one in `componentDidMount` or as a callback function to one of the DOM nodes.
 
 ---
 
