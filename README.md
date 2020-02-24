@@ -31,8 +31,8 @@ This lecture is meant as a space for exploring the superpowers of React componen
 - parking lot
 2. **Builder analogy:**
 - explore it [here](http://lifecycle-photostory.surge.sh/)
-3. **Builder analogy:**
-- explore it [here](http://lifecycle-photostory.surge.sh/)
+3. **Appetizers:**
+- infinite loop of rerendering!
 4. **First hurdle:** logging spree
 - `constructor` 
 - `render`

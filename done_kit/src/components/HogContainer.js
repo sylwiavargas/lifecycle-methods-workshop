@@ -20,22 +20,21 @@ export default class HogContainer extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState){
-        // return nextProps.hogs.length > 14
         console.log(`%cMAYBE WILL UPDATE: HogContainer`, `color: ${generalHogContainerColor}`);
-        return true
+        // return nextProps.hogs.length > 14
+        // return true
     }
 
     componentDidUpdate(){
         console.log(`%cUPDATED: HogContainer`, `color: ${generalHogContainerColor}`);
       }
 
-    // static getDerivedStateFromProps(nextProps) {
-    //     const code = nextProps.code
-    //     return {code}
-    // }
+    static getDerivedStateFromProps(nextProps) {
+        const code = nextProps.code
+        return {code}
+    }
 
     componentWillUnmount(){
-        // clearInterval(this.interval)
         console.log(`%cUNMOUNTING: HogContainer`, `color: ${generalHogContainerColor}`);
     }
 
@@ -44,6 +43,7 @@ export default class HogContainer extends Component {
         // console.log("%cPROPS", `color: ${generalHogContainerColor}`, this.props)
         // console.log("%cSTATE", `color: ${generalHogContainerColor}`, this.state.code)
         console.log(`%cRENDERED: HogContainer`, `color: ${generalHogContainerColor}`);
+
         return (
             <div className="ui grid container styled" >
                 {this.state.code.length > 1

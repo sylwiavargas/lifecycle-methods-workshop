@@ -13,40 +13,40 @@ export default class PigTile extends Component {
       }
 
     componentDidMount(){
-        this.interval = setInterval(
-            () => this.setState({
-              timeToGo: this.state.timeToGo - 1
-            }),
-            1000
-          )
+        // this.interval = setInterval(
+        //     () => this.setState({
+        //       timeToGo: this.state.timeToGo - 1
+        //     }),
+        //     1000
+        //   )
         console.log(`%cMOUNTED: PigTile`, `color: ${generalTileColor}`);
     }
 
     shouldComponentUpdate(nextProps, nextState){
-      if (this.props.hog.name === "Piggy smalls"){
-        console.log("🐽 🐽 🐽 🐽 🐽 ")
-        console.log(`%cMAYBE UPDATE: PigTile of ${this.props.hog.name}`, `color: ${generalTileColor}`, this.state.timeToGo);
-      }
+      // if (this.props.hog.name === "Piggy smalls"){
+      //   console.log("🐽 🐽 🐽 🐽 🐽 ")
+      //   console.log(`%cMAYBE UPDATE: PigTile of ${this.props.hog.name}`, `color: ${generalTileColor}`, this.state.timeToGo);
+      // }
         // return nextState.timeToGo > -1
         return true
     }
 
     componentDidUpdate(){
-      if (this.props.hog.name === "Piggy smalls"){
-        console.log(`%cUPDATED: PigTile of ${this.props.hog.name}`, `color: ${generalTileColor}`);
-      }
+      // if (this.props.hog.name === "Piggy smalls"){
+      //   console.log(`%cUPDATED: PigTile of ${this.props.hog.name}`, `color: ${generalTileColor}`);
+      // }
         // console.log(`%cUPDATED: PigTile of ${this.props.hog.name}`, `color: ${generalTileColor}`);
       }
 
     componentWillUnmount(){
-        // clearInterval(this.interval)
+        clearInterval(this.interval)
         console.log(`%cUNMOUNTING: PigTile`, `color: ${generalTileColor}`);
     }
 
     render() {
-      if (this.props.hog.name === "Piggy smalls"){
+      // if (this.props.hog.name === "Piggy smalls"){
         console.log(`%cRENDERED: PigTile of ${this.props.hog.name}`, `color: ${generalTileColor}`, this.state.timeToGo);
-      }
+      // }
         // console.log(`%cRENDERED: PigTile`, `color: ${generalTileColor}`);
         // console.log(`%c${this.props.hog.name}:`, `color: ${generalTileColor}`, this.state.timeToGo)
         console.groupEnd()
