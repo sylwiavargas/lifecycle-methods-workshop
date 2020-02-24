@@ -22,9 +22,10 @@ To start your adventure, `cd` into a folder of choice, run `npm install` and the
 ---
 
 ## Resources:
-[Lifecycle methods - React docs](https://reactjs.org/docs/state-and-lifecycle.html)
-[Lifecycle methods graph](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
-[Lecture video - to be added](https://youtu.be/)
+* [Lifecycle methods - React docs](https://reactjs.org/docs/state-and-lifecycle.html)
+* [Lifecycle methods graph](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+* [Generating random color](https://dev.to/akhil_001/generating-random-color-with-single-line-of-js-code-fhj)
+* [Lecture video - to be added](https://youtu.be/)
 
 ---
 
