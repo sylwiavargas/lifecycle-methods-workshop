@@ -30,6 +30,7 @@ This lecture is meant as a space for exploring the superpowers of React componen
 - speaking and questions
 - parking lot
 2. **Builder analogy:**
+- what are [lifecycle methods](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 - explore it [here](http://lifecycle-photostory.surge.sh/)
 3. **Appetizers:**
 - infinite loop of rerendering!

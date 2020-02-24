@@ -15,7 +15,7 @@ class App extends Component {
       sortValue: "All",
       filterValue: false
     }
-    // console.log(`%cMOUNTED: App`, `color: ${generalAppColor}`);
+    // console.log(`%CONSTRUCTED: App`, `color: ${generalAppColor}`);
   }
 
   componentDidMount(){
