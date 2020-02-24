@@ -11,10 +11,21 @@ To start your adventure, `cd` into a folder of choice, run `npm install` and the
 
 ---
 
+## Goals:
+- you will understand what lifecycle methods are;
+- you will understand when lifecycle methods fire up;
+- you will understand why **we should never put setState() in render()**;
+- you will know how to prevent unnecessary rerendering of a component;
+- you will understand a memory leak symptoms, causes and treatment;
+- you will remember forever **not to put props in state**;
+
+---
+
 ## Agenda
 This lecture is meant as a space for exploring the superpowers of React components. The lecture will have a form of quick-pace fun riddles and will include practice exercices. **There are no awesomeness points and mistakes are viewed as a part of learning**.
 1. **Intro + rules:**
 - readme overview
+- notifications
 - time and break
 - speaking and questions
 - parking lot
@@ -42,16 +53,6 @@ This lecture is meant as a space for exploring the superpowers of React componen
 10. **Sixth Hurdle:** forbidden knowledge
 - `getDerivedStateFromProps`
 11. **SWABTs review + Q&A**
-
----
-
-## SBATs:
-- student will understand what lifecycle methods are;
-- student will understand when lifecycle methods fire up;
-- student will understand why **we should never put setState() in render()**;
-- student will know how to prevent unnecessary rerendering of a component;
-- student will understand a memory leak symptoms, causes and treatment;
-- student will remember forever **not to put props in state**;
 
 ---
 
