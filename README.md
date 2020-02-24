@@ -181,7 +181,7 @@ React newbies tend to put props in state. Whoa, there's even a method that allow
 ```
 Feel judged by Dan Abramov.
 
-**NOTE:** in all seriousness, you should never put your props in your state. React won't yell at you but your instructors and employers will. Do not do that. This method is for a very specific edge case: while dealing with a transition animation library, you need to keep track of the window size. 
+**NOTE:** in all seriousness, you should **never put your props in your state**. React won't yell at you but your instructors and employers will. Do not do that. This method is for a very specific edge case: while dealing with a transition animation library, you need to keep track of the window size. 
 
 ---
 
