@@ -1,13 +1,8 @@
 # Lifecycle methods
 
-This is a repo for a lecture-workshop I gave on React 16 lifecycle methods. I am using a codebase already known to students, namely [Hogwarts lab](https://github.com/learn-co-students/hogwarts-dumbo-web-120919).
+This is a repo for a lecture-workshop I gave on React 16 lifecycle methods in February 2020. Here is [a video from that lecture](https://youtu.be/MrBkhjE-YL0). 
 
-This repo contains three folders:
-- `starter_kit` for those who want to code-along;
-- `lecture_kit` which is the code I will use in the lecture (visible in the video);
-- `done_kit` in case we don't have time to cover all bonuses and you'd like to see how certain features/methods can be implemented.
-
-To start your adventure, `cd` into a folder of choice, run `npm install` and then `npm start`.
+I am using a codebase already known to students, namely [Hogwarts lab](https://github.com/learn-co-students/hogwarts-dumbo-web-120919).
 
 ---
 
@@ -21,38 +16,57 @@ To start your adventure, `cd` into a folder of choice, run `npm install` and the
 
 ---
 
+## Getting started:
+
+To start your adventure, clone this repo, then `cd` into a folder of choice, run `npm install` in your terminal to install all the dependencies and then `npm start` to start react server.
+
+This repo contains three folders:
+- `starter_kit` for those who want to code-along;
+- `lecture_kit` which is the code I will use in the lecture (visible in the video);
+- `done_kit` in case we don't have time to cover all bonuses and you'd like to see how certain features/methods can be implemented.
+
+### Component tree and wireframe
+![Component tree](done_kit/awwboard.png)
+
+---
+
 ## Agenda
-This lecture is meant as a space for exploring the superpowers of React components. The lecture will have a form of quick-pace fun riddles and will include practice exercices. **There are no awesomeness points and mistakes are viewed as a part of learning**.
+This lecture is meant as a space for exploring the superpowers of React lifecycle methods. The lecture is in a form of quick-pace fun riddles and will include practice exercices. 
+
+**NOTE: There are no awesomeness points and mistakes are viewed as a part of learning**.
+
 1. **Intro + rules:**
-- readme overview
-- notifications
-- time and break
-- speaking and questions
-- parking lot
+    - readme overview
+    - notifications
+    - time and break
+    - speaking and questions
+    - parking lot
 2. **Builder analogy:**
-- what are [lifecycle methods](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
-- explore it [here](http://lifecycle-photostory.surge.sh/)
-3. **Appetizers:**
-- infinite loop of rerendering!
-4. **First hurdle:** logging spree
-- `constructor` 
-- `render`
-- `shouldComponentUpdate`
-- `componentDidMount`
-- `componentDidUpdate`
-- `componentWillUnmount`
+    - what are [lifecycle methods](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)?
+    - explore the analogy [here](http://lifecycle-photostory.surge.sh/)
+3. **[Appetizers:](#appetizers-stack-overflow-by-rerendering)**
+    - infinite loop of rerendering!
+4. **[First hurdle:](#first-hurdle-logging-spree)** logging spree
+    - `constructor` 
+    - `render`
+    - `shouldComponentUpdate`
+    - `componentDidMount`
+    - `componentDidUpdate`
+    - `componentWillUnmount`
 5. **Break** (5 mins)
-6. **Second hurdle:** SEO and accessibility
-- `componentDidMount`
-7. **Third hurdle:** timer
-- `componentDidMount`
-8. **Fourth Hurdle:** preventing memory leakage
-- `componentWillnmount`
-- or `componentDidUpdate`
-9. **Fifth Hurdle:** controlling rerendering
-- `shouldComponentUpdate`
-10. **Sixth Hurdle:** forbidden knowledge
-- `getDerivedStateFromProps`
+6. **[Second hurdle:](#second-hurdle-seo-and-accessibility)** SEO and accessibility
+    - `componentDidMount`
+7. **[Third hurdle:](#third-hurdle-timer)** timer
+    - `componentDidMount`
+8. **[Fourth Hurdle:](#fourth-hurdle-memory-leakage)** preventing memory leakage
+    - `componentWillnmount`
+    - or `componentDidUpdate`
+9. **[Fifth Hurdle:](#fifth-hurdle-controlling-rerendering)** controlling rerendering
+    - `shouldComponentUpdate`
+10. **[Sixth Hurdle:](#sixth-hurdle-forbidden-knowledge)** forbidden knowledge
+    - `getDerivedStateFromProps`
+11. **[Not covered + Bonus](https://github.com/sylwiavargas/lifecycle-methods-workshop#not-covered-getsnapshotbeforeupdate)** 
+    - [error handling](#bonus-error-handling)
 11. **SWABTs review + Q&A**
 
 ---
@@ -63,11 +77,6 @@ This lecture is meant as a space for exploring the superpowers of React componen
 * [Lifecycle methods graph](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 * [Generating random color](https://dev.to/akhil_001/generating-random-color-with-single-line-of-js-code-fhj)
 * [What is binding functions?](https://www.freecodecamp.org/news/this-is-why-we-need-to-bind-event-handlers-in-class-components-in-react-f7ea1a6f93eb/)
-
----
-
-## Component tree and wireframe
-![Component tree](done_kit/awwboard.png)
 
 ---
 
